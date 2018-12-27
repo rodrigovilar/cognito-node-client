@@ -1,0 +1,27 @@
+{
+  "name": "cognito-client",
+  "version": "0.1.0",
+  "description": "A node client to authenticate into Amazon Cognito",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "cognito",
+    "amazon",
+    "client"
+  ],
+  "author": "Rodrigo Vilar <rvilar@gmail.com>",
+  "repository": {
+    "url": "https://github.com/rodrigovilar/cognito-node-client.git"
+  },
+  "license": "LGPL-3.0-only",
+  "dependencies": {
+    "amazon-cognito-identity-js": "^3.0.6",
+    "aws-sdk": "^2.382.0",
+    "jsonwebtoken": "^8.4.0",
+    "jwk-to-pem": "^2.0.1",
+    "node-fetch": "^2.3.0",
+    "request": "^2.88.0"
+  }
+}
