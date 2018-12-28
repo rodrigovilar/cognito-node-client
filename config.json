@@ -1,0 +1,10 @@
+{
+    "userPoolId" : "",
+    "clientId" : "",
+    "password" : "",
+    "verificationCode" : "",
+    "name" : "",
+    "birthdate" : "",
+    "email" :  "",
+    "phone_number" : ""
+}
