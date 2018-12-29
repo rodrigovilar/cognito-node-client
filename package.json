@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "A node client to authenticate into Amazon Cognito",
   "main": "index.js",
+  "bin": {
+    "myapp": "lib/cli.js"
+  },
   "scripts": {
     "test": "test"
   },
@@ -18,6 +21,9 @@
   "license": "LGPL-3.0-only",
   "dependencies": {
     "amazon-cognito-identity-js": "^3.0.6",
+    "commander": "^2.19.0",
+    "file-system": "^2.2.2",
+    "inquirer": "^6.2.1",
     "node-fetch": "^2.3.0"
   }
 }

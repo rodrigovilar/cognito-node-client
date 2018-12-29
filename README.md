@@ -9,21 +9,23 @@ The goal is use Cognito User pools to sign up from a Node client.
 Usage steps:
 
 1. Create a User pool for your app
-  1. Sign in to the [Amazon Cognito console](https://console.aws.amazon.com/cognito/home)
-  2. Choose Manage your User Pools / Create a User Pool
-  3. Type pool name and choose Review defaults
-  4. From the left navigation pane, choose Attributes
+   1. Sign in to the [Amazon Cognito console](https://console.aws.amazon.com/cognito/home)
+   2. Choose Manage your User Pools / Create a User Pool
+   3. Type pool name and choose Review defaults
+   4. From the left navigation pane, choose Attributes
+
     After seting email, phone number and given name attributes as required and after users in the pool verifying their email addresses, they can sign in with their usernames or email addresses
-  5. Choose Next step until App clients
-  6. Choose Add an app client
-    1. Set App client name, uncheck Generate client secret and choose Create app client
-  7. Choose Next step until Review
-  8. Choose Create pool
+
+   5. Choose Next step until App clients
+   6. Choose Add an app client
+      1. Set App client name, uncheck Generate client secret and choose Create app client
+   7. Choose Next step until Review
+   8. Choose Create pool
 2. Note necessary ids
-  1. Note Pool Id
-  2. From the left navigation pane, choose App clients and note App client id
+   1. Note Pool Id
+   2. From the left navigation pane, choose App clients and note App client id
 3. Register user
-  1. Create a config.json file with the following structure:
+   1. Create a config.json file with the following structure:
 
 ```javascript
 {
@@ -40,7 +42,7 @@ Usage steps:
 }
 ```
 
-  2. Invoke the RegisterUser function:
+   2. Invoke the RegisterUser function:
 
 ```javascript
 const userpool = require('./lib/userpool');
@@ -55,8 +57,8 @@ userpool.RegisterUser(config.userPoolId, config.clientId, config.username, confi
     });
 ```
 
-  3. The configured email (e.g. `example@user.com`) will receive the verification code that should be writen on config.json file
-  4. Invoke the ConfirmUser function:
+   3. The configured email (e.g. `example@user.com`) will receive the verification code that should be writen on config.json file
+   4. Invoke the ConfirmUser function:
 
 ```javascript
 userpool.ConfirmUser(config.userPoolId, config.clientId, config.username, config.verificationCode, 
@@ -68,11 +70,11 @@ userpool.ConfirmUser(config.userPoolId, config.clientId, config.username, config
     });
 ```
 
-  5. On Amazon Cognito console, open the User pool / General Settings / Users and Groups
-  6. Check the users status, should be `CONFIRMED` 
+   5. On Amazon Cognito console, open the User pool / General Settings / Users and Groups
+   6. Check the users status, should be `CONFIRMED` 
 
 4. Log in
-  1. Invoke the Login function
+   1. Invoke the Login function
 
 ```javascript
 userpool.Login(config.userPoolId, config.clientId, config.username, config.password,
