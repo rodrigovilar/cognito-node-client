@@ -24,6 +24,7 @@
     "commander": "^2.19.0",
     "file-system": "^2.2.2",
     "inquirer": "^6.2.1",
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "request": "^2.88.0"
   }
 }
